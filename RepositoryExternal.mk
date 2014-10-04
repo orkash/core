@@ -3348,7 +3348,7 @@ $(call gb_LinkTarget_add_libs,$(1),\
 )
 else
 $(call gb_LinkTarget_add_libs,$(1),\
-	$(call gb_UnpackedTarball_get_dir,libgltf)/src/.libs/libgltf-0.0$(gb_StaticLibrary_PLAINEXT) \
+	$(call gb_UnpackedTarball_get_dir,libgltf)/src/.libs/libgltf-0.1$(gb_StaticLibrary_PLAINEXT) \
 )
 endif
 
