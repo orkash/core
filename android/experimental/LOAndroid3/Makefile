@@ -33,6 +33,13 @@ build-ant: android_version_setup copy-stuff link-so properties
 	for F in unoil; do \
 	    $(call COPYJAR,$(INSTDIR)/$(LIBO_SHARE_JAVA_FOLDER)/$${F}.jar); \
 	done
+	#ownCloud lib dependencies
+	$(call COPYJAR,$(WORKDIR)/UnpackedTarball/owncloud_android_lib/bin/owncloud-android-library.jar)
+	for F in commons-httpclient-3.1 \
+		 jackrabbit-webdav-2.7.2 \
+		 slf4j-api-1.7.5; do \
+	    $(call COPYJAR,$(WORKDIR)/UnpackedTarball/owncloud_android_lib/libs/$${F}.jar); \
+	done
 #
 	unset JAVA_HOME && $(ANT) $(if $(VERBOSE)$(verbose),,-quiet) $(if $(ENABLE_RELEASE_BUILD),release,debug)
 

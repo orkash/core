@@ -1,0 +1,4 @@
+Library required to access ownCloud servers from Android.
+
+Code from https://github.com/owncloud/android-library, our tarball is the 0.9.4
+release sans the test and example projects.
